@@ -1,10 +1,22 @@
 #ifndef USER_H
 #define USER_H
 
-class user
+#include <QDialog>
+
+namespace Ui {
+class user;
+}
+
+class user : public QDialog
 {
+    Q_OBJECT
+
 public:
-    user();
+    explicit user(QWidget *parent = nullptr);
+    ~user();
+
+private:
+    Ui::user *ui;
 };
 
 #endif // USER_H

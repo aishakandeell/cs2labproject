@@ -11,9 +11,8 @@ CONFIG += c++17
 SOURCES += \
     admin.cpp \
     cart.cpp \
+    checkout.cpp \
     main.cpp \
-    mainwindow.cpp \
-    payment.cpp \
     products.cpp \
     search.cpp \
     user.cpp
@@ -21,14 +20,18 @@ SOURCES += \
 HEADERS += \
     admin.h \
     cart.h \
-    mainwindow.h \
-    payment.h \
+    checkout.h \
     products.h \
     search.h \
     user.h
 
 FORMS += \
-    mainwindow.ui
+    admin.ui \
+    cart.ui \
+    checkout.ui \
+    products.ui \
+    search.ui \
+    user.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

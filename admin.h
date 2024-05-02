@@ -1,10 +1,22 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
-class admin
+#include <QDialog>
+
+namespace Ui {
+class admin;
+}
+
+class admin : public QDialog
 {
+    Q_OBJECT
+
 public:
-    admin();
+    explicit admin(QWidget *parent = nullptr);
+    ~admin();
+
+private:
+    Ui::admin *ui;
 };
 
 #endif // ADMIN_H
