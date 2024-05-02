@@ -1,22 +1,10 @@
 #ifndef PRODUCTS_H
 #define PRODUCTS_H
 
-#include <QDialog>
-
-namespace Ui {
-class products;
-}
-
-class products : public QDialog
+class products
 {
-    Q_OBJECT
-
 public:
-    explicit products(QWidget *parent = nullptr);
-    ~products();
-
-private:
-    Ui::products *ui;
+    products();
 };
 
 #endif // PRODUCTS_H

@@ -1,11 +1,14 @@
-#include "mainwindow.h"
+#include "main.h"
+#include "ui_main.h"
 
-#include <QApplication>
-
-int main(int argc, char *argv[])
+main::main(QWidget *parent)
+    : QDialog(parent)
+    , ui(new Ui::main)
 {
-    QApplication a(argc, argv);
-    MainWindow w;
-    w.show();
-    return a.exec();
+    ui->setupUi(this);
+}
+
+main::~main()
+{
+    delete ui;
 }
