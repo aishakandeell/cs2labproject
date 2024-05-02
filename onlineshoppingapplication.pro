@@ -13,6 +13,7 @@ SOURCES += \
     cart.cpp \
     checkout.cpp \
     main.cpp \
+    mainpage.cpp \
     payment.cpp \
     products.cpp \
     search.cpp \
@@ -22,7 +23,7 @@ HEADERS += \
     admin.h \
     cart.h \
     checkout.h \
-    main.h \
+    mainpage.h \
     payment.h \
     products.h \
     search.h \
@@ -30,7 +31,7 @@ HEADERS += \
 
 FORMS += \
     checkout.ui \
-    main.ui
+    mainpage.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

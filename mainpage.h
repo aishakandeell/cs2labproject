@@ -1,5 +1,5 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef MAINPAGE_H
+#define MAINPAGE_H
 
 #include <QDialog>
 
@@ -19,4 +19,4 @@ private:
     Ui::main *ui;
 };
 
-#endif // MAIN_H
+#endif // MAINPAGE_H
