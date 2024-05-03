@@ -28,6 +28,9 @@ private slots:
 
 private:
     Ui::registrationwindow *ui;
+    int numregistered = 0; // Define count
+    std::vector<std::string> usernames; // Define usernames vector
+    std::vector<std::string> passwords; // Define passwords vector
 };
 
 #endif // REGISTRATIONWINDOW_H

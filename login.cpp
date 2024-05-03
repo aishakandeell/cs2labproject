@@ -20,12 +20,15 @@ void login::on_login2_clicked()
 {
     std::string username = ui->usernamel->text().toStdString();
     std::string password = ui->passwordl->text().toStdString();
+
     for(int i=0; i<=numregistered;i++){
+
         if (( username == usernames[i])&&(password == passwords[i])){
             //go to products page
             hide (); // hiding this page
             products* productswindow = new products (this); //creating a new window of type products
             productswindow -> show();
+
         }
     }
     ui -> usernamel -> setText ("");

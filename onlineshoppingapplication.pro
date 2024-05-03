@@ -12,6 +12,7 @@ SOURCES += \
     adminplat.cpp \
     adminsettings.cpp \
     cart.cpp \
+    edituser.cpp \
     login.cpp \
     main.cpp \
     products.cpp \
@@ -23,6 +24,7 @@ HEADERS += \
     adminplat.h \
     adminsettings.h \
     cart.h \
+    edituser.h \
     login.h \
     products.h \
     registrationwindow.h \
@@ -33,6 +35,7 @@ FORMS += \
     adminplat.ui \
     adminsettings.ui \
     cart.ui \
+    edituser.ui \
     login.ui \
     products.ui \
     registrationwindow.ui \
