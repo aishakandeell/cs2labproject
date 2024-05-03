@@ -20,6 +20,8 @@ private slots:
     void on_loginclicked_clicked();
     void on_registerclicked_clicked();
 
+    void on_adminbutton_clicked();
+
 private:
     Ui::userpage *ui;
 };

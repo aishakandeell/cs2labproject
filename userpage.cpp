@@ -1,4 +1,5 @@
 #include "userpage.h"
+#include "adminplat.h"
 #include "ui_userpage.h"
 #include "registrationwindow.h"
 #include "login.h"
@@ -31,3 +32,10 @@ void userpage::on_registerclicked_clicked()
     registerwindow -> show();
 }
 
+void userpage::on_adminbutton_clicked(){
+
+    hide();
+    adminplat* admin = new adminplat();
+    admin->show();
+
+}

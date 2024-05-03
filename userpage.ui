@@ -6,38 +6,51 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>358</width>
+    <height>205</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="loginclicked">
+  <widget class="QPushButton" name="adminbutton">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>190</y>
-     <width>83</width>
-     <height>29</height>
+     <x>40</x>
+     <y>160</y>
+     <width>121</width>
+     <height>32</height>
     </rect>
    </property>
    <property name="text">
-    <string>login</string>
+    <string>Admin</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="registerclicked">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>190</y>
-     <width>83</width>
-     <height>29</height>
+     <x>40</x>
+     <y>120</y>
+     <width>271</width>
+     <height>32</height>
     </rect>
    </property>
-   <property name="text">
-    <string>register</string>
-   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="loginclicked">
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="registerclicked">
+      <property name="text">
+       <string>Register</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

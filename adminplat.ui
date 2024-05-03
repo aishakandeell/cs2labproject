@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>login</class>
- <widget class="QDialog" name="login">
+ <class>adminplat</class>
+ <widget class="QDialog" name="adminplat">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>240</width>
-    <height>169</height>
+    <width>268</width>
+    <height>122</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="login2">
+  <widget class="QLabel" name="incorrect">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>120</y>
-     <width>83</width>
-     <height>29</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Login</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="loginerror">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
      <y>90</y>
-     <width>191</width>
-     <height>31</height>
+     <width>131</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -42,34 +29,31 @@
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>196</width>
-     <height>54</height>
+     <x>10</x>
+     <y>10</y>
+     <width>241</width>
+     <height>71</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QLabel" name="label">
       <property name="text">
-       <string>Username</string>
+       <string>Enter Admin Password:</string>
       </property>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="usernamel"/>
-    </item>
     <item row="1" column="0">
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>Password</string>
+     <widget class="QLineEdit" name="adminPass">
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
     <item row="1" column="1">
-     <widget class="QLineEdit" name="passwordl">
-      <property name="echoMode">
-       <enum>QLineEdit::Password</enum>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Enter</string>
       </property>
      </widget>
     </item>
