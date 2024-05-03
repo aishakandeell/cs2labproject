@@ -16,7 +16,7 @@
   <widget class="QPushButton" name="loginclicked">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>60</x>
      <y>190</y>
      <width>83</width>
      <height>29</height>
