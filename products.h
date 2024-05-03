@@ -19,8 +19,6 @@ class products : public QDialog
 public:
     explicit products(QWidget *parent = nullptr);
     ~products();
-    void searchbyname();
-    void searchbycategory();
 private slots:
     void on_product1_clicked();
     void on_product2_clicked();
@@ -28,6 +26,8 @@ private slots:
     void on_product4_clicked();
 
     void on_gotocart_clicked();
+
+    void on_searchbutton_clicked();
 
 private:
     Ui::products *ui;

@@ -14,6 +14,7 @@ SOURCES += \
     main.cpp \
     products.cpp \
     registrationwindow.cpp \
+    searchwindow.cpp \
     userpage.cpp
 
 HEADERS += \
@@ -21,6 +22,7 @@ HEADERS += \
     login.h \
     products.h \
     registrationwindow.h \
+    searchwindow.h \
     userpage.h
 
 FORMS += \
@@ -28,6 +30,7 @@ FORMS += \
     login.ui \
     products.ui \
     registrationwindow.ui \
+    searchwindow.ui \
     userpage.ui
 
 # Default rules for deployment.

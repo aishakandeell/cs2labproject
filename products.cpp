@@ -1,6 +1,7 @@
 #include "products.h"
 #include "ui_products.h"
 #include "cart.h"
+#include "searchwindow.h"
 
 std::vector<std::string> productslist = {"product1", "product2", "product3", "product4"};
 std::vector<double> prices = {50.0, 30.0, 40.0, 35.0};
@@ -17,7 +18,6 @@ products::products(QWidget *parent)
     ui-> na3 -> setVisible(false);
     ui-> na4 -> setVisible(false);
 }
-
 products::~products()
 {
     delete ui;
@@ -31,8 +31,6 @@ void products::on_product1_clicked()
     else{
         availability[0]--;}
 }
-
-
 void products::on_product2_clicked()
 {
     if(availability[1]<1){
@@ -41,8 +39,6 @@ void products::on_product2_clicked()
     else{
         availability[1]--;}
 }
-
-
 void products::on_product3_clicked()
 {
     if(availability[2]<1){
@@ -51,8 +47,6 @@ void products::on_product3_clicked()
     else{
         availability[2]--;}
 }
-
-
 void products::on_product4_clicked()
 {
     if(availability[3]<1){
@@ -61,14 +55,17 @@ void products::on_product4_clicked()
     else{
         availability[3]--;}
 }
-
-
 void products::on_gotocart_clicked()
 {
     hide (); // hiding this page
-    cart* cartwindow = new cart (this); //creating a new window of type WelcomeWindow
+    cart* cartwindow = new cart (this);
     cartwindow -> show();
 }
-void searchbyname(){}
-void searchbycategory(){}
+
+void products::on_searchbutton_clicked()
+{
+    hide (); // hiding this page
+    searchwindow* searchpage = new searchwindow (this);
+    searchpage -> show();
+}
 

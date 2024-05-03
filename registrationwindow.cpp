@@ -28,7 +28,7 @@ void registrationwindow::on_registerclicked_clicked()
     numregistered++;
     //go to products page
     hide (); // hiding this page
-    products* productswindow = new products (this); //creating a new window of type WelcomeWindow
+    products* productswindow = new products (this);
     productswindow -> show();
 }
 
