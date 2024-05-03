@@ -1,7 +1,10 @@
 #include "registrationwindow.h"
 #include "ui_registrationwindow.h"
 #include "products.h"
-
+using namespace std;
+int numregistered = 0; // Define numregistered
+vector<string> usernames;
+vector<string> passwords;
 registrationwindow::registrationwindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::registrationwindow)
