@@ -3,11 +3,11 @@
 #include <vector>
 #include <QDialog>
 #include <string>
-
+using namespace std;
 extern int numregistered; // Declare count as extern
-extern std::vector<std::string> usernames; // Declare usernames vector as extern
-extern std::vector<std::string> passwords; // Declare passwords vector as extern
-
+extern vector<string> usernames; // Declare usernames vector as extern
+extern vector<string> passwords; // Declare passwords vector as extern
+extern vector<string> emails;
 namespace Ui {
 class registrationwindow;
 }
@@ -26,8 +26,8 @@ private slots:
 private:
     Ui::registrationwindow *ui;
     int numregistered = 0; // Define count
-    std::vector<std::string> usernames; // Define usernames vector
-    std::vector<std::string> passwords; // Define passwords vector
+    vector<string> usernames; // Define usernames vector
+    vector<string> passwords; // Define passwords vector
 };
 
 #endif // REGISTRATIONWINDOW_H
