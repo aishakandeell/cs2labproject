@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addproduct.cpp \
     adminplat.cpp \
     adminsettings.cpp \
     cart.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
     userpage.cpp
 
 HEADERS += \
+    addproduct.h \
     adminplat.h \
     adminsettings.h \
     cart.h \
@@ -34,6 +36,7 @@ HEADERS += \
     userpage.h
 
 FORMS += \
+    addproduct.ui \
     adminplat.ui \
     adminsettings.ui \
     cart.ui \

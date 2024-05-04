@@ -1,4 +1,5 @@
 #include "adminsettings.h"
+#include "addproduct.h"
 #include "deleteuser.h"
 #include "edituser.h"
 #include "registrationwindow.h"
@@ -26,7 +27,6 @@ void adminSettings::on_addUser_clicked()
 
 void adminSettings::on_editUser_clicked()
 {
-    hide();
     edituser* eU = new edituser();
     eU->show();
 }
@@ -34,8 +34,14 @@ void adminSettings::on_editUser_clicked()
 
 void adminSettings::on_deleteUser_clicked()
 {
-    hide();
     deleteuser* dU = new deleteuser();
     dU->show();
+}
+
+
+void adminSettings::on_addProd_clicked()
+{
+    addproduct* aP = new addproduct();
+    aP->show();
 }
 

@@ -3,10 +3,11 @@
 #include "cart.h"
 #include "searchwindow.h"
 
-std::vector<std::string> productslist = {"product1", "product2", "product3", "product4"};
-std::vector<double> prices = {50.0, 30.0, 40.0, 35.0};
+std::vector<std::string> productslist = {"Bananas", "Water", "Potatoes", "Chips"};
+std::vector<double> prices = {3.00, 2.50, 4.00, 3.50};
 std::vector<int> availability = {2, 1, 4, 6};
-std::vector<std::string> category = {"category1", "category2", "category1", "category2"};
+std::vector<std::string> category = {"Fruits", "Vegetables", "Beverages", "Snacks"};
+int prodAdded = 4;
 
 products::products(QWidget *parent)
     : QDialog(parent)

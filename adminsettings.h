@@ -22,6 +22,8 @@ private slots:
 
     void on_deleteUser_clicked();
 
+    void on_addProd_clicked();
+
 private:
     Ui::adminSettings *ui;
 };

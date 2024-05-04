@@ -8,6 +8,7 @@ extern std::vector<std::string> productslist;
 extern std::vector<double> prices;
 extern std::vector<int> availability;
 extern std::vector<std::string> category;
+extern int prodAdded;
 namespace Ui {
 class products;
 }
