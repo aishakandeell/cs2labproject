@@ -5,6 +5,7 @@ using namespace std;
 int numregistered = 0; // Define numregistered
 vector<string> usernames;
 vector<string> passwords;
+
 registrationwindow::registrationwindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::registrationwindow)
@@ -29,5 +30,4 @@ void registrationwindow::on_registerclicked_clicked()
     products* productswindow = new products (this);
     productswindow -> show();
 }
-
 

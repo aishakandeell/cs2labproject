@@ -2,6 +2,7 @@
 #define REGISTRATIONWINDOW_H
 #include <vector>
 #include <QDialog>
+#include <string>
 
 extern int numregistered; // Declare count as extern
 extern std::vector<std::string> usernames; // Declare usernames vector as extern
@@ -18,10 +19,6 @@ class registrationwindow : public QDialog
 public:
     explicit registrationwindow(QWidget *parent = nullptr);
     ~registrationwindow();
-    /*std::vector<std::string> usernames;
-    std::vector<std::string> passwords;
-    static int count;
-*/
 
 private slots:
     void on_registerclicked_clicked();

@@ -1,4 +1,5 @@
 #include "adminsettings.h"
+#include "deleteuser.h"
 #include "edituser.h"
 #include "registrationwindow.h"
 #include "ui_adminsettings.h"
@@ -28,5 +29,13 @@ void adminSettings::on_editUser_clicked()
     hide();
     edituser* eU = new edituser();
     eU->show();
+}
+
+
+void adminSettings::on_deleteUser_clicked()
+{
+    hide();
+    deleteuser* dU = new deleteuser();
+    dU->show();
 }
 

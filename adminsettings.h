@@ -20,6 +20,8 @@ private slots:
 
     void on_editUser_clicked();
 
+    void on_deleteUser_clicked();
+
 private:
     Ui::adminSettings *ui;
 };

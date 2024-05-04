@@ -1,10 +1,11 @@
-#include "edituser.h"
-#include "ui_edituser.h"
+#include "deleteuser.h"
+#include "QtWidgets/qmessagebox.h"
 #include "registrationwindow.h"
-#include <QMessageBox>
+#include "ui_deleteuser.h"
+#include <vector>
 using namespace std;
 
-int edituser::getIndex(vector<string> v, string un)
+int deleteuser::getIndex(vector<string> v, string un)
 {
     auto iter = ::find(v.begin(), v.end(), un);
 
@@ -18,27 +19,27 @@ int edituser::getIndex(vector<string> v, string un)
     }
 }
 
-edituser::edituser(QWidget *parent)
+deleteuser::deleteuser(QWidget *parent)
     : QDialog(parent)
-    , ui(new Ui::edituser)
+    , ui(new Ui::deleteuser)
 {
     ui->setupUi(this);
 }
 
-edituser::~edituser()
+deleteuser::~deleteuser()
 {
     delete ui;
 }
 
-void edituser::on_saveButton_clicked()
+void deleteuser::on_deleteButton_clicked()
 {
     int index = 0;
-    index = getIndex(usernames, ui->oldUser->text().toStdString());
+    index = getIndex(usernames, ui->userDelete->text().toStdString());
     if(index >= 0){
-        usernames[index] = ui->newUser->text().toStdString();
-        passwords[index] = ui->newPass->text().toStdString();
+        usernames.erase(usernames.begin() + index);
+        passwords.erase(passwords.begin() + index);
         QMessageBox complete;
-        complete.setInformativeText("User has been Successfully Edited");
+        complete.setInformativeText("User has been Successfully Deleted");
         complete.setFixedSize(500, 200);
     }
     else{
@@ -46,5 +47,6 @@ void edituser::on_saveButton_clicked()
         errorMessage.critical(0, "Error", "Username Not Found");
         errorMessage.setFixedSize(500, 200);
     }
+    hide();
 }
 
