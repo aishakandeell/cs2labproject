@@ -29,9 +29,9 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>140</x>
+     <x>80</x>
      <y>90</y>
-     <width>301</width>
+     <width>361</width>
      <height>181</height>
     </rect>
    </property>
@@ -120,57 +120,45 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_2">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>100</y>
-     <width>63</width>
-     <height>20</height>
+     <y>90</y>
+     <width>61</width>
+     <height>181</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Bananas</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>150</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Water</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_4">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>190</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Potatoes</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_5">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>240</y>
-     <width>63</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Chips</string>
-   </property>
+   <layout class="QFormLayout" name="formLayout_2">
+    <item row="0" column="0">
+     <widget class="QLabel" name="prod1">
+      <property name="text">
+       <string>Bananas</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="prod2">
+      <property name="text">
+       <string>Water</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="prod3">
+      <property name="text">
+       <string>Potatoes</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="prod4">
+      <property name="text">
+       <string>Chips</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
  </widget>
  <resources/>

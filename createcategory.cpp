@@ -3,6 +3,7 @@
 #include "addproduct.h"
 #include "ui_createcategory.h"
 #include "products.h"
+#include <fstream>
 
 createCategory::createCategory(QWidget *parent)
     : QDialog(parent)
@@ -19,6 +20,10 @@ createCategory::~createCategory()
 void createCategory::on_catAdd_clicked()
 {
     if(ui->catName->text() != ""){
+        ofstream pcFile(":/prodInfo/Product Info/category.txt");
+        pcFile << ui->catName->text().toStdString();
+        pcFile.close();
+
         category.push_back(ui->catName->text().toStdString());
         string newCat = ui->catName->text().toStdString();
         QMessageBox complete;

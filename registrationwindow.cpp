@@ -51,6 +51,7 @@ void registrationwindow::on_registerclicked_clicked()
             ui -> passwordr -> setText ("");
         }
     }
+
     usernames.push_back(username);
     passwords.push_back(password);
     numregistered++;
