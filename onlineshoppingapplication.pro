@@ -22,6 +22,7 @@ SOURCES += \
     main.cpp \
     products.cpp \
     registrationwindow.cpp \
+    searchresults.cpp \
     searchwindow.cpp \
     userpage.cpp
 
@@ -38,6 +39,7 @@ HEADERS += \
     login.h \
     products.h \
     registrationwindow.h \
+    searchresults.h \
     searchwindow.h \
     userpage.h
 
@@ -54,6 +56,7 @@ FORMS += \
     login.ui \
     products.ui \
     registrationwindow.ui \
+    searchresults.ui \
     searchwindow.ui \
     userpage.ui
 

@@ -9,6 +9,10 @@ userpage::userpage(QWidget *parent)
     , ui(new Ui::userpage)
 {
     ui->setupUi(this);
+    QPixmap icon(":/icons/Icons/store.png");
+    int w = ui->labelIcon->width();
+    int h = ui->labelIcon->height();
+    ui->labelIcon->setPixmap(icon.scaled(w,h,Qt::KeepAspectRatio));
 }
 
 userpage::~userpage()

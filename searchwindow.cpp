@@ -1,5 +1,8 @@
 #include "searchwindow.h"
+#include "QtWidgets/qmessagebox.h"
+#include "searchresults.h"
 #include "ui_searchwindow.h"
+#include "products.h"
 
 searchwindow::searchwindow(QWidget *parent)
     : QDialog(parent)
@@ -12,3 +15,23 @@ searchwindow::~searchwindow()
 {
     delete ui;
 }
+
+void searchwindow::on_search_clicked()
+{
+    std::string searchQuery = ui->queryBox->text().toStdString();
+    string result;
+    for(string result : productslist){
+        if(searchQuery == result){
+            hide();
+            searchresults* sR = new searchresults();
+            sR->show();
+        }
+        else {
+            QMessageBox errorMessage;
+            errorMessage.critical(0, "Error", "Product Not Found");
+            errorMessage.setFixedSize(500, 200);
+        }
+    }
+}
+
+

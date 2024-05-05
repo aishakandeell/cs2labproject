@@ -9,4 +9,7 @@
         <file>Product Info/prices.txt</file>
         <file>Product Info/productlist.txt</file>
     </qresource>
+    <qresource prefix="/icons">
+        <file>Icons/store.png</file>
+    </qresource>
 </RCC>
