@@ -35,8 +35,15 @@ void edituser::on_saveButton_clicked()
     int index = 0;
     index = getIndex(usernames, ui->oldUser->text().toStdString());
     if(index >= 0){
-        usernames[index] = ui->newUser->text().toStdString();
-        passwords[index] = ui->newPass->text().toStdString();
+
+        if(ui->newUser->text().toStdString() != ""){
+            usernames[index] = ui->newUser->text().toStdString();
+        }
+
+        if(ui->newPass->text().toStdString() != ""){
+            passwords[index] = ui->newPass->text().toStdString();
+        }
+
         QMessageBox complete;
         complete.setInformativeText("User has been Successfully Edited");
         complete.setFixedSize(500, 200);

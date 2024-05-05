@@ -41,12 +41,12 @@ void deleteuser::on_deleteButton_clicked()
         QMessageBox complete;
         complete.setInformativeText("User has been Successfully Deleted");
         complete.setFixedSize(500, 200);
+        hide();
     }
     else{
         QMessageBox errorMessage;
         errorMessage.critical(0, "Error", "Username Not Found");
         errorMessage.setFixedSize(500, 200);
     }
-    hide();
 }
 

@@ -18,6 +18,8 @@ public:
 private slots:
     void on_addProd_clicked();
 
+    void on_createCat_clicked();
+
 private:
     Ui::addproduct *ui;
 };

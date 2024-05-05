@@ -24,6 +24,10 @@ private slots:
 
     void on_addProd_clicked();
 
+    void on_editProd_clicked();
+
+    void on_deleteProd_clicked();
+
 private:
     Ui::adminSettings *ui;
 };

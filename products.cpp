@@ -8,6 +8,7 @@ std::vector<double> prices = {3.00, 2.50, 4.00, 3.50};
 std::vector<int> availability = {2, 1, 4, 6};
 std::vector<std::string> category = {"Fruits", "Vegetables", "Beverages", "Snacks"};
 int prodAdded = 4;
+int catAdded = 4;
 
 products::products(QWidget *parent)
     : QDialog(parent)

@@ -1,5 +1,6 @@
 #include "adminplat.h"
 #include "adminsettings.h"
+#include "changeadminp.h"
 #include "ui_adminplat.h"
 
 adminplat::adminplat(QWidget *parent)
@@ -27,4 +28,5 @@ void adminplat::on_pushButton_clicked()
         ui->adminPass->setText("");
     }
 }
+
 

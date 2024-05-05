@@ -1,5 +1,6 @@
 #include "addproduct.h"
 #include "QtWidgets/qmessagebox.h"
+#include "createcategory.h"
 #include "ui_addproduct.h"
 #include "products.h"
 
@@ -9,6 +10,9 @@ addproduct::addproduct(QWidget *parent)
     , ui(new Ui::addproduct)
 {
     ui->setupUi(this);
+    for(string i: category){
+        ui->categoryProd->addItem(QString::fromStdString(i));
+    }
 }
 
 addproduct::~addproduct()
@@ -22,6 +26,8 @@ void addproduct::on_addProd_clicked()
         productslist.push_back(ui->prodName->text().toStdString());
         prices.push_back(ui->priceProd->text().toDouble());
         availability.push_back(ui->avaProd->text().toInt());
+        category.push_back(ui->categoryProd->currentText().toStdString());
+        prodAdded++;
         QMessageBox complete;
         complete.setInformativeText("Product has been Successfully Added");
         complete.setFixedSize(500, 200);
@@ -32,5 +38,12 @@ void addproduct::on_addProd_clicked()
         errorMessage.setFixedSize(500, 200);
     }
 
+}
+
+
+void addproduct::on_createCat_clicked()
+{
+    createCategory* cC = new createCategory();
+    cC->show();
 }
 
