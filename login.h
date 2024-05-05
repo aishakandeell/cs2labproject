@@ -18,6 +18,8 @@ public:
 private slots:
     void on_login2_clicked();
 
+    void on_backtoregister_clicked();
+
 private:
     Ui::login *ui;
 };

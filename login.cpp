@@ -2,6 +2,7 @@
 #include "ui_login.h"
 #include "registrationwindow.h"
 #include "products.h"
+#include "userpage.h"
 
 login::login(QWidget *parent)
     : QDialog(parent)
@@ -30,9 +31,18 @@ void login::on_login2_clicked()
             productswindow -> show();
 
         }
+        ui-> loginerror -> setVisible(false);
+        ui -> usernamel -> setText ("");
+        ui -> passwordl -> setText ("");
+        ui-> loginerror -> setVisible(true);
     }
-    ui -> usernamel -> setText ("");
-    ui -> passwordl -> setText ("");
-    ui-> loginerror -> setVisible(true);
+}
+
+
+void login::on_backtoregister_clicked()
+{
+    hide (); // hiding this page
+    userpage* backtoreg = new userpage (this); //creating a new window of type products
+    backtoreg -> show();
 }
 
