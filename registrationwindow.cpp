@@ -1,11 +1,16 @@
 #include "registrationwindow.h"
+#include "QtWidgets/qmessagebox.h"
 #include "ui_registrationwindow.h"
 #include "products.h"
+#include <fstream>
+
 using namespace std;
+
 int numregistered = 0; // Define numregistered
 vector<string> usernames={"user1"};
 vector<string> passwords={"123"};
 vector<string> emails={"user@"};
+
 registrationwindow::registrationwindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::registrationwindow)
@@ -25,6 +30,17 @@ void registrationwindow::on_registerclicked_clicked()
     string username = ui->usernamer->text().toStdString();
     string password = ui->passwordr->text().toStdString();
     string email=ui->emailr->text().toStdString();
+
+    ofstream regunFile(":/userCred/User Credentials/usernames.txt");
+    ofstream regpwFile(":/userCred/User Credentials/passwords.txt");
+
+    regunFile << username;
+    regpwFile << password;
+
+    regunFile.close();
+    regpwFile.close();
+
+
     for(int i=0;i<numregistered;i++){
         if(usernames[i]==username) {
             ui-> usernameexists -> setVisible(true);

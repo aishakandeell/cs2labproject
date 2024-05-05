@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/userCred">
+        <file>User Credentials/passwords.txt</file>
+        <file>User Credentials/usernames.txt</file>
+    </qresource>
+    <qresource prefix="/prodInfo">
+        <file>Product Info/availability.txt</file>
+        <file>Product Info/category.txt</file>
+        <file>Product Info/prices.txt</file>
+        <file>Product Info/productlist.txt</file>
+    </qresource>
+</RCC>

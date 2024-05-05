@@ -1,8 +1,10 @@
 #include "login.h"
+#include "QtWidgets/qmessagebox.h"
 #include "ui_login.h"
 #include "registrationwindow.h"
 #include "products.h"
 #include "userpage.h"
+#include <fstream>
 
 login::login(QWidget *parent)
     : QDialog(parent)
@@ -10,6 +12,43 @@ login::login(QWidget *parent)
 {
     ui->setupUi(this);
     ui-> loginerror -> setVisible(false);
+
+    string readUn;
+    string readPw;
+
+    ifstream unfile;
+    ifstream pwfile;
+
+    unfile.open(":/userCred/User Credentials/usernames.txt");
+    pwfile.open(":/userCred/User Credentials/passwords.txt");
+
+    if(unfile.fail()){
+        QMessageBox errorMessage;
+        errorMessage.critical(0, "Error", "Error Loading Credentials");
+        errorMessage.setFixedSize(500, 200);
+        return;
+    }
+
+    while(!unfile.eof()){
+        getline(unfile, readUn);
+        usernames.push_back(readUn);
+    }
+
+    unfile.close();
+
+    if(pwfile.fail()){
+        QMessageBox errorMessage;
+        errorMessage.critical(0, "Error", "Error Loading Credentials");
+        errorMessage.setFixedSize(500, 200);
+        return;
+    }
+
+    while(!pwfile.eof()){
+        getline(pwfile, readPw);
+        usernames.push_back(readPw);
+    }
+
+    pwfile.close();
 }
 
 login::~login()
