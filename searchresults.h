@@ -2,6 +2,7 @@
 #define SEARCHRESULTS_H
 
 #include <QDialog>
+using namespace std;
 
 namespace Ui {
 class searchresults;
@@ -14,6 +15,7 @@ class searchresults : public QDialog
 public:
     explicit searchresults(QWidget *parent = nullptr);
     ~searchresults();
+
 
 private:
     Ui::searchresults *ui;
