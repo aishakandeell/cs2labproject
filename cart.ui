@@ -13,32 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="checkout">
-   <property name="geometry">
-    <rect>
-     <x>209</x>
-     <y>200</y>
-     <width>151</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Checkout</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="totalprice">
-   <property name="geometry">
-    <rect>
-     <x>220</x>
-     <y>180</y>
-     <width>61</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Total Price :</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label_5">
    <property name="geometry">
     <rect>
@@ -49,15 +23,15 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Cart:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Cart&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QPushButton" name="gotocatalog">
    <property name="geometry">
     <rect>
-     <x>10</x>
-     <y>187</y>
-     <width>80</width>
+     <x>20</x>
+     <y>180</y>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
@@ -65,13 +39,13 @@
     <string>Go To Catalog </string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>60</y>
-     <width>148</width>
-     <height>52</height>
+     <y>57</y>
+     <width>311</width>
+     <height>81</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -100,6 +74,32 @@
      <widget class="QPushButton" name="remove">
       <property name="text">
        <string>Remove </string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>160</y>
+     <width>131</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="totalprice">
+      <property name="text">
+       <string>Total Price :</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="checkout">
+      <property name="text">
+       <string>Checkout</string>
       </property>
      </widget>
     </item>
