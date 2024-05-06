@@ -97,6 +97,12 @@ products::products(QWidget *parent)
     }
 
     ppfile.close();
+
+    ui->prod1->setText(QString::fromStdString(productslist[0]));
+    ui->prod2->setText(QString::fromStdString(productslist[1]));
+    ui->prod3->setText(QString::fromStdString(productslist[2]));
+    ui->prod2->setText(QString::fromStdString(productslist[3]));
+
 }
 products::~products()
 {
@@ -147,5 +153,13 @@ void products::on_searchbutton_clicked()
     hide (); // hiding this page
     searchwindow* searchpage = new searchwindow (this);
     searchpage -> show();
+}
+
+
+void products::on_nextPage_clicked()
+{
+    hide();
+    products* pN = new products(this);
+    pN->show();
 }
 

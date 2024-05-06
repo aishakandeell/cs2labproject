@@ -12,7 +12,15 @@ login::login(QWidget *parent)
 {
     ui->setupUi(this);
     ui-> loginerror -> setVisible(false);
+}
 
+login::~login()
+{
+    delete ui;
+}
+
+void login::on_login2_clicked()
+{
     string readUn;
     string readPw;
 
@@ -49,15 +57,7 @@ login::login(QWidget *parent)
     }
 
     pwfile.close();
-}
 
-login::~login()
-{
-    delete ui;
-}
-
-void login::on_login2_clicked()
-{
     std::string username = ui->usernamel->text().toStdString();
     std::string password = ui->passwordl->text().toStdString();
 
@@ -75,6 +75,8 @@ void login::on_login2_clicked()
         ui -> passwordl -> setText ("");
         ui-> loginerror -> setVisible(true);
     }
+
+
 }
 
 

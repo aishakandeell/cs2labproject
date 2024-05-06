@@ -30,6 +30,8 @@ private slots:
 
     void on_searchbutton_clicked();
 
+    void on_nextPage_clicked();
+
 private:
     Ui::products *ui;
 };

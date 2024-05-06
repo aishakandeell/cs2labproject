@@ -1,5 +1,6 @@
 #include "searchresults.h"
 #include "ui_searchresults.h"
+#include "searchwindow.h"
 
 searchresults::searchresults(QWidget *parent)
     : QDialog(parent)

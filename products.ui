@@ -30,7 +30,7 @@
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>90</y>
+     <y>50</y>
      <width>361</width>
      <height>181</height>
     </rect>
@@ -120,12 +120,12 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>90</y>
-     <width>61</width>
+     <x>12</x>
+     <y>50</y>
+     <width>71</width>
      <height>181</height>
     </rect>
    </property>
@@ -133,32 +133,45 @@
     <item row="0" column="0">
      <widget class="QLabel" name="prod1">
       <property name="text">
-       <string>Bananas</string>
+       <string>Prod1</string>
       </property>
      </widget>
     </item>
     <item row="1" column="0">
      <widget class="QLabel" name="prod2">
       <property name="text">
-       <string>Water</string>
+       <string>Prod2</string>
       </property>
      </widget>
     </item>
     <item row="2" column="0">
      <widget class="QLabel" name="prod3">
       <property name="text">
-       <string>Potatoes</string>
+       <string>Prod3</string>
       </property>
      </widget>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="prod4">
       <property name="text">
-       <string>Chips</string>
+       <string>Prod4</string>
       </property>
      </widget>
     </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="nextPage">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>240</y>
+     <width>100</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Next Page</string>
+   </property>
   </widget>
  </widget>
  <resources/>

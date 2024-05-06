@@ -1,6 +1,8 @@
 #ifndef SEARCHWINDOW_H
 #define SEARCHWINDOW_H
 
+#include "searchresults.h"
+#include "ui_searchwindow.h"
 #include <QDialog>
 
 namespace Ui {

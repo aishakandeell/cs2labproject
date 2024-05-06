@@ -2,6 +2,7 @@
 #define SEARCHRESULTS_H
 
 #include <QDialog>
+
 using namespace std;
 
 namespace Ui {
