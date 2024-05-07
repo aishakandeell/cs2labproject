@@ -16,8 +16,7 @@ int cart::getIndex(vector<string> v, string un)
     }
 }
 
-
-extern std::vector<std::string> cartt;
+std::vector<std::string> cartt;
 
 cart::cart(QWidget *parent)
     : QDialog(parent)

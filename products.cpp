@@ -4,11 +4,13 @@
 #include "cart.h"
 #include "searchwindow.h"
 #include <QMessageBox>
+using namespace std;
 
 std::vector<std::string> productslist = {"Bananas", "Water", "Potatoes", "Chips"};
 std::vector<double> prices = {3.00, 2.50, 4.00, 3.50};
 std::vector<int> availability = {2, 1, 4, 6};
 std::vector<std::string> category = {"Fruits", "Beverages", "Vegetables", "Snacks"};
+
 int prodAdded = 4;
 int catAdded = 4;
 int cartAdd = 0;
