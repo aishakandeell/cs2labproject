@@ -3,7 +3,6 @@
 #include "addproduct.h"
 #include "ui_createcategory.h"
 #include "products.h"
-#include <fstream>
 
 createCategory::createCategory(QWidget *parent)
     : QDialog(parent)
