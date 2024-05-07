@@ -3,6 +3,7 @@
 #include "searchresults.h"
 #include "ui_searchwindow.h"
 #include "products.h"
+#include <QLabel>
 
 searchwindow::searchwindow(QWidget *parent)
     : QDialog(parent)
@@ -22,9 +23,11 @@ void searchwindow::on_search_clicked()
     string result;
     for(string result : productslist){
         if(searchQuery == result){
-            hide();
+            /*hide();
             searchresults* sR = new searchresults();
-            sR->show();
+            sR->show();*/
+            QLabel *label=new QLabel(QString::fromStdString(result));
+            label->show();
         }
         else {
             QMessageBox errorMessage;
@@ -34,4 +37,12 @@ void searchwindow::on_search_clicked()
     }
 }
 
+
+
+void searchwindow::on_back_clicked()
+{
+    hide (); // hiding this page
+    products* backtoprod = new products (this); //creating a new window of type products
+    backtoprod -> show();
+}
 

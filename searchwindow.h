@@ -20,6 +20,8 @@ public:
 private slots:
     void on_search_clicked();
 
+    void on_back_clicked();
+
 private:
     Ui::searchwindow *ui;
 };
