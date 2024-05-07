@@ -36,10 +36,10 @@ cart::~cart()
 
 void cart::on_remove_clicked()
 {
-    /*int index= getIndex(cartt,ui->productname->text().toStdString());
+    int index= getIndex(cartt,ui->productname->text().toStdString());
     cartt.erase(cartt.begin()+index);
     ui->productname->setVisible(false);
     ui->price->setVisible(false);
-    ui->quantity->setVisible(false); */
+    ui->quantity->setVisible(false);
 }
 
