@@ -4,7 +4,6 @@
 #include "registrationwindow.h"
 #include "products.h"
 #include "userpage.h"
-#include <fstream>
 
 login::login(QWidget *parent)
     : QDialog(parent)

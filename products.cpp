@@ -3,6 +3,7 @@
 #include "ui_products.h"
 #include "cart.h"
 #include "searchwindow.h"
+#include <QMessageBox>
 
 std::vector<std::string> productslist = {"Bananas", "Water", "Potatoes", "Chips"};
 std::vector<double> prices = {3.00, 2.50, 4.00, 3.50};
@@ -10,6 +11,7 @@ std::vector<int> availability = {2, 1, 4, 6};
 std::vector<std::string> category = {"Fruits", "Beverages", "Vegetables", "Snacks"};
 int prodAdded = 4;
 int catAdded = 4;
+int cartAdd = 0;
 
 products::products(QWidget *parent)
     : QDialog(parent)
@@ -21,7 +23,12 @@ products::products(QWidget *parent)
     ui-> na3 -> setVisible(false);
     ui-> na4 -> setVisible(false);
 
+    ui->prod1->setText(QString::fromStdString(productslist[0]));
+    ui->prod2->setText(QString::fromStdString(productslist[1]));
+    ui->prod3->setText(QString::fromStdString(productslist[2]));
+    ui->prod4->setText(QString::fromStdString(productslist[3]));
 }
+
 products::~products()
 {
     delete ui;
@@ -33,7 +40,11 @@ void products::on_product1_clicked()
         ui-> na1 -> setVisible(true);
     }
     else{
-        availability[0]--;}
+        availability[0]--;
+        cartt[cartAdd] = productslist[0];
+        cartAdd++;
+        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
+
 }
 void products::on_product2_clicked()
 {
@@ -41,7 +52,10 @@ void products::on_product2_clicked()
         ui-> na2 -> setVisible(true);
     }
     else{
-        availability[1]--;}
+        availability[1]--;
+        cartt[cartAdd] = productslist[1];
+        cartAdd++;
+        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
 }
 void products::on_product3_clicked()
 {
@@ -49,7 +63,10 @@ void products::on_product3_clicked()
         ui-> na3 -> setVisible(true);
     }
     else{
-        availability[2]--;}
+        availability[2]--;
+        cartt[cartAdd] = productslist[2];
+        cartAdd++;
+        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
 }
 void products::on_product4_clicked()
 {
@@ -57,7 +74,11 @@ void products::on_product4_clicked()
         ui-> na4 -> setVisible(true);
     }
     else{
-        availability[3]--;}
+        availability[3]--;
+        cartt[cartAdd] = productslist[3];
+        cartAdd++;
+        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
+
 }
 void products::on_gotocart_clicked()
 {
