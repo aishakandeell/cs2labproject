@@ -1,6 +1,11 @@
 #include "cart.h"
+#include "checkout.h"
+#include "products.h"
 #include "ui_cart.h"
 using namespace std;
+
+double totalprice=0;
+
 
 int cart::getIndex(vector<string> v, string un)
 {
@@ -24,6 +29,7 @@ cart::cart(QWidget *parent)
 {
 
     ui->setupUi(this);
+    totalprice = prices[getIndex(cartt,ui->productname->text().toStdString())];
     ui->totalprice->setText("Total Price : " + QString::number(totalprice));
 }
 
@@ -41,5 +47,20 @@ void cart::on_remove_clicked()
     ui->productname->setVisible(false);
     ui->price->setVisible(false);
     ui->quantity->setVisible(false);
+}
+
+
+void cart::on_gotocatalog_clicked()
+{
+    hide();
+    products* pD = new products();
+    pD->show();
+}
+
+
+void cart::on_checkout_clicked()
+{
+    checkout* cO = new checkout();
+    cO->show();
 }
 

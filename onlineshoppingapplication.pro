@@ -13,6 +13,7 @@ SOURCES += \
     adminplat.cpp \
     adminsettings.cpp \
     cart.cpp \
+    checkout.cpp \
     createcategory.cpp \
     deleteprod.cpp \
     deleteuser.cpp \
@@ -31,6 +32,7 @@ HEADERS += \
     adminplat.h \
     adminsettings.h \
     cart.h \
+    checkout.h \
     createcategory.h \
     deleteprod.h \
     deleteuser.h \
@@ -48,6 +50,7 @@ FORMS += \
     adminplat.ui \
     adminsettings.ui \
     cart.ui \
+    checkout.ui \
     createcategory.ui \
     deleteprod.ui \
     deleteuser.ui \

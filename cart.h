@@ -16,16 +16,20 @@ class cart : public QDialog
 public:
     explicit cart(QWidget *parent = nullptr);
     ~cart();
+    double totalprice=0;
 
 private slots:
 
     void on_remove_clicked();
 
 
+    void on_gotocatalog_clicked();
+
+    void on_checkout_clicked();
+
 private:
     int getIndex(vector<string> v,string un);
     Ui::cart *ui;
-    double totalprice=0;
 };
 
 #endif // CART_H
