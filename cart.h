@@ -2,9 +2,10 @@
 #define CART_H
 #include <vector>
 #include <QDialog>
+#include <stack>
 using namespace std;
-
-extern std::vector<std::string> cartt;
+extern double totalprice;
+extern std::stack<std::string> cartt;
 namespace Ui {
 class cart;
 }
@@ -16,7 +17,8 @@ class cart : public QDialog
 public:
     explicit cart(QWidget *parent = nullptr);
     ~cart();
-    double totalprice=0;
+   // double totalprice=0;
+    static void updateprice(int i);
 
 private slots:
 
@@ -28,8 +30,10 @@ private slots:
     void on_checkout_clicked();
 
 private:
-    int getIndex(vector<string> v,string un);
+    int getIndex(const std::string& name, const std::vector<std::string>& un);
+    void displayCartItems();
     Ui::cart *ui;
+
 };
 
 #endif // CART_H

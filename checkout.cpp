@@ -9,7 +9,7 @@ checkout::checkout(QWidget *parent)
 {
     ui->setupUi(this);
     ui->ccinfo->setVisible(false);
-    ui->total->setText("Total Price: " + QString::number(1));
+    ui->total->setText("Total Price: " + QString::number(totalprice));
 }
 
 checkout::~checkout()
