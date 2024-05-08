@@ -41,6 +41,7 @@ void deleteuser::on_deleteButton_clicked()
         QMessageBox complete;
         complete.setInformativeText("User has been Successfully Deleted");
         complete.setFixedSize(500, 200);
+        registrationwindow::deleteUserFromData(index);
         hide();
     }
     else{

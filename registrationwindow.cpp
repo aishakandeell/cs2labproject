@@ -7,6 +7,7 @@
 
 using namespace std;
 
+
 int numregistered = 0;
 vector<string> usernames;
 vector<string> passwords;
@@ -56,6 +57,32 @@ void registrationwindow::writeUserData() {
         }
         file.close();
     }
+}
+
+void registrationwindow::deleteUserFromData(int r){
+    std::ifstream inFile(filename);
+    if (!inFile.is_open()) {
+        //label error in deleting
+    }
+
+    vector<std::string> lines;
+    string line;
+    int i;
+    while (getline(inFile, line)) {
+        // Check if this line contains the username to delete
+        if (i!=r) {
+            lines.push_back(line); // Add line to vector if username is not found
+        }
+        i++;
+    }
+    inFile.close();
+
+    ofstream outFile(filename, ios::trunc); // Open file for writing, truncating previous content
+
+    for (const auto& l : lines) {
+        outFile << l << std::endl; // Write all lines except the one to delete
+    }
+    outFile.close();
 }
 
 void registrationwindow::on_registerclicked_clicked()

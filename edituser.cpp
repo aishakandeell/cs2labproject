@@ -47,6 +47,7 @@ void edituser::on_saveButton_clicked()
         QMessageBox complete;
         complete.setInformativeText("User has been Successfully Edited");
         complete.setFixedSize(500, 200);
+        registrationwindow::writeUserData();
     }
     else{
         QMessageBox errorMessage;

@@ -20,7 +20,8 @@ public:
     explicit registrationwindow(QWidget *parent = nullptr);
     ~registrationwindow();
     void readUserData();
-    void writeUserData();
+    static void writeUserData();
+    static void deleteUserFromData(int r);
 
 private slots:
     void on_registerclicked_clicked();
