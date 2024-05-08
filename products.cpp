@@ -4,6 +4,7 @@
 #include "cart.h"
 #include "searchwindow.h"
 #include <QMessageBox>
+#include "login.h"
 using namespace std;
 
 std::vector<std::string> productslist = {"Bananas", "Water", "Potatoes", "Chips"};
@@ -43,10 +44,11 @@ void products::on_product1_clicked()
         ui-> na1 -> setVisible(true);
     }
     else{
-        availability[0]--;
+        availability[0]--;   
         cartt[cartAdd] = productslist[0];
         cartAdd++;
-        ui->added->setText(QString::number(cartAdd) + " Products Added to Cart");}
+        ui->added->setText(QString::number(cartAdd) + " Products Added to Cart");
+    }
 
 }
 void products::on_product2_clicked()
@@ -103,5 +105,13 @@ void products::on_nextPage_clicked()
     hide();
     products* pN = new products(this);
     pN->show();
+}
+
+
+void products::on_login_clicked()
+{
+    hide(); // hiding this page
+    login* loginpage = new login(this);
+    loginpage->show();
 }
 

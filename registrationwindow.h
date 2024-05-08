@@ -19,12 +19,14 @@ class registrationwindow : public QDialog
 public:
     explicit registrationwindow(QWidget *parent = nullptr);
     ~registrationwindow();
-    void readUserData();
+    static void readUserData();
     static void writeUserData();
     static void deleteUserFromData(int r);
 
 private slots:
     void on_registerclicked_clicked();
+
+    void on_login_clicked();
 
 private:
     Ui::registrationwindow *ui;

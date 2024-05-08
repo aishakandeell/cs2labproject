@@ -21,7 +21,7 @@ int cart::getIndex(vector<string> v, string un)
     }
 }
 
-std::vector<std::string> cartt;
+std::vector<std::string> cartt={"empty"};
 
 cart::cart(QWidget *parent)
     : QDialog(parent)

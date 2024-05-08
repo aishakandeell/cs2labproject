@@ -1,4 +1,5 @@
-#include "functions.h"
+/*#include "functions.h"
+#include <string>
 #include <vector>
 using namespace std;
 
@@ -25,3 +26,4 @@ bool functions::findUser(string username, vector<string> v){
         return false;
     }
 }
+*/

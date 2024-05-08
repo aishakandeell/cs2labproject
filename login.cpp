@@ -20,7 +20,7 @@ login::~login()
 
 void login::on_login2_clicked()
 {
-
+    registrationwindow::readUserData();
     std::string username = ui->usernamel->text().toStdString();
     std::string password = ui->passwordl->text().toStdString();
     bool found = false;

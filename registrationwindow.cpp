@@ -5,13 +5,13 @@
 #include <QFile>
 #include <fstream> // For file I/O
 #include <sstream> // For string manipulation
-
+#include "login.h"
 using namespace std;
 
 
 int numregistered = 0;
-vector<string> usernames;
-vector<string> passwords;
+vector<string> usernames={"ai"};
+vector<string> passwords={"123"};
 vector<string> emails;
 const string filename = "users.txt"; // File to store user data
 
@@ -37,9 +37,9 @@ void registrationwindow::readUserData() {
     if (file.is_open()) {
         string line;
         while (getline(file, line)) {
-            istringstream iss(line);
+            istringstream i(line);
             string username, password, email;
-            if (iss >> username >> password >> email) {
+            if (i >> username >> password >> email) {
                 usernames.push_back(username);
                 passwords.push_back(password);
                 emails.push_back(email);
@@ -134,3 +134,11 @@ void registrationwindow::on_registerclicked_clicked()
         productswindow->show();
     }
 }
+
+void registrationwindow::on_login_clicked()
+{
+    hide(); // hiding this page
+    login* loginpage = new login(this);
+    loginpage->show();
+}
+

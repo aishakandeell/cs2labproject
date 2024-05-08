@@ -32,6 +32,8 @@ private slots:
 
     void on_nextPage_clicked();
 
+    void on_login_clicked();
+
 private:
     Ui::products *ui;
 };
