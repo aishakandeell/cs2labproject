@@ -2,6 +2,7 @@
 #include "QtWidgets/qmessagebox.h"
 #include "ui_registrationwindow.h"
 #include "products.h"
+#include <QFile>
 #include <fstream> // For file I/O
 #include <sstream> // For string manipulation
 
@@ -50,6 +51,7 @@ void registrationwindow::readUserData() {
 }
 
 void registrationwindow::writeUserData() {
+
     ofstream file(filename, ios::trunc); // Truncate file if it exists
     if (file.is_open()) {
         for (int i = 0; i < numregistered; ++i) {
@@ -57,6 +59,7 @@ void registrationwindow::writeUserData() {
         }
         file.close();
     }
+
 }
 
 void registrationwindow::deleteUserFromData(int r){

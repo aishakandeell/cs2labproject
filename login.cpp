@@ -26,7 +26,7 @@ void login::on_login2_clicked()
     bool found = false;
     for(int i=0; i<=numregistered;i++){
 
-        if (( username == usernames[i])&&(password == passwords[i])){
+        if ( username == usernames[i] && password == passwords[i]){
             //go to products page
             hide (); // hiding this page
             products* productswindow = new products (this); //creating a new window of type products
@@ -43,7 +43,6 @@ void login::on_login2_clicked()
         ui -> passwordl -> setText ("");
         ui-> loginerror -> setVisible(true);
     }
-
 
 }
 

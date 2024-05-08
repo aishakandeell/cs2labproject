@@ -19,6 +19,7 @@ SOURCES += \
     deleteuser.cpp \
     editproduct.cpp \
     edituser.cpp \
+    functions.cpp \
     login.cpp \
     main.cpp \
     products.cpp \
@@ -38,6 +39,7 @@ HEADERS += \
     deleteuser.h \
     editproduct.h \
     edituser.h \
+    functions.h \
     login.h \
     products.h \
     registrationwindow.h \
