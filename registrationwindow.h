@@ -19,15 +19,15 @@ class registrationwindow : public QDialog
 public:
     explicit registrationwindow(QWidget *parent = nullptr);
     ~registrationwindow();
+    void readUserData();
+    void writeUserData();
 
 private slots:
     void on_registerclicked_clicked();
 
 private:
     Ui::registrationwindow *ui;
-    int numregistered = 0; // Define count
-    vector<string> usernames; // Define usernames vector
-    vector<string> passwords; // Define passwords vector
+
 };
 
 #endif // REGISTRATIONWINDOW_H

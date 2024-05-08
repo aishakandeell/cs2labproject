@@ -24,6 +24,7 @@ products::products(QWidget *parent)
     ui-> na2 -> setVisible(false);
     ui-> na3 -> setVisible(false);
     ui-> na4 -> setVisible(false);
+    ui-> added->setVisible(false);
 
     ui->prod1->setText(QString::fromStdString(productslist[0]));
     ui->prod2->setText(QString::fromStdString(productslist[1]));
@@ -45,7 +46,7 @@ void products::on_product1_clicked()
         availability[0]--;
         cartt[cartAdd] = productslist[0];
         cartAdd++;
-        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
+        ui->added->setText(QString::number(cartAdd) + " Products Added to Cart");}
 
 }
 void products::on_product2_clicked()
@@ -57,7 +58,7 @@ void products::on_product2_clicked()
         availability[1]--;
         cartt[cartAdd] = productslist[1];
         cartAdd++;
-        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
+        ui->added->setText(QString::number(cartAdd) + " Products Added to Cart");}
 }
 void products::on_product3_clicked()
 {
@@ -68,7 +69,7 @@ void products::on_product3_clicked()
         availability[2]--;
         cartt[cartAdd] = productslist[2];
         cartAdd++;
-        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
+        ui->added->setText(QString::number(cartAdd) + " Products Added to Cart");}
 }
 void products::on_product4_clicked()
 {
@@ -79,7 +80,7 @@ void products::on_product4_clicked()
         availability[3]--;
         cartt[cartAdd] = productslist[3];
         cartAdd++;
-        ui->productsCart->setText(QString::number(cartAdd) + " Products Added to Cart");}
+        ui->added->setText(QString::number(cartAdd) + " Products Added to Cart");}
 
 }
 void products::on_gotocart_clicked()

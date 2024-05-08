@@ -2,21 +2,27 @@
 #include "QtWidgets/qmessagebox.h"
 #include "ui_registrationwindow.h"
 #include "products.h"
+#include <fstream> // For file I/O
+#include <sstream> // For string manipulation
 
 using namespace std;
 
-int numregistered = 0; // Define numregistered
-vector<string> usernames={"user1", "user2", "user3"};
-vector<string> passwords={"123", "123", "123"};
-vector<string> emails={"user1@", "user2@", "user3@"};
+int numregistered = 0;
+vector<string> usernames;
+vector<string> passwords;
+vector<string> emails;
+const string filename = "users.txt"; // File to store user data
 
 registrationwindow::registrationwindow(QWidget *parent)
     : QDialog(parent)
     , ui(new Ui::registrationwindow)
 {
     ui->setupUi(this);
-    ui-> usernameexists -> setVisible(false);
-    ui-> emailexists -> setVisible(false);
+    ui->usernameexists->setVisible(false);
+    ui->emailexists->setVisible(false);
+
+    // Read user data from file
+    readUserData();
 }
 
 registrationwindow::~registrationwindow()
@@ -24,32 +30,77 @@ registrationwindow::~registrationwindow()
     delete ui;
 }
 
+void registrationwindow::readUserData() {
+    ifstream file(filename);
+    if (file.is_open()) {
+        string line;
+        while (getline(file, line)) {
+            istringstream iss(line);
+            string username, password, email;
+            if (iss >> username >> password >> email) {
+                usernames.push_back(username);
+                passwords.push_back(password);
+                emails.push_back(email);
+                numregistered++;
+            }
+        }
+        file.close();
+    }
+}
+
+void registrationwindow::writeUserData() {
+    ofstream file(filename, ios::trunc); // Truncate file if it exists
+    if (file.is_open()) {
+        for (int i = 0; i < numregistered; ++i) {
+            file << usernames[i] << " " << passwords[i] << " " << emails[i] << endl;
+        }
+        file.close();
+    }
+}
+
 void registrationwindow::on_registerclicked_clicked()
 {
     string username = ui->usernamer->text().toStdString();
     string password = ui->passwordr->text().toStdString();
-    string email=ui->emailr->text().toStdString();
+    string email = ui->emailr->text().toStdString();
 
-
-    for(int i=0;i<numregistered;i++){
-        if(usernames[i]==username) {
-            ui-> usernameexists -> setVisible(true);
-            ui -> usernamer -> setText ("");
+    // Check if username or email already exist
+    bool userExists = false;
+    bool emailExists = false;
+    for (int i = 0; i < numregistered; i++) {
+        if (usernames[i] == username) {
+            userExists = true;
+            break;
         }
-        if(emails[i]==email){
-            ui-> emailexists -> setVisible(true);
-            ui -> passwordr -> setText ("");
+        if (emails[i] == email) {
+            emailExists = true;
+            break;
         }
     }
 
-    usernames.push_back(username);
-    passwords.push_back(password);
-    emails.push_back(email);
-    numregistered++;
+    // Show appropriate message if username or email already exists
+    if (userExists) {
+        ui->usernameexists->setVisible(true);
+        ui->usernamer->setText("");
+    }
+    if (emailExists) {
+        ui->emailexists->setVisible(true);
+        ui->passwordr->setText("");
+    }
 
-    //go to products page
-    hide (); // hiding this page
-    products* productswindow = new products (this);
-    productswindow -> show();
+    // Register the user if username and email are unique
+    if (!userExists && !emailExists) {
+        usernames.push_back(username);
+        passwords.push_back(password);
+        emails.push_back(email);
+        numregistered++;
+
+        // Write updated user data to file
+        writeUserData();
+
+        // Go to products page
+        hide(); // hiding this page
+        products* productswindow = new products(this);
+        productswindow->show();
+    }
 }
-

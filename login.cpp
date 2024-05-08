@@ -23,7 +23,7 @@ void login::on_login2_clicked()
 
     std::string username = ui->usernamel->text().toStdString();
     std::string password = ui->passwordl->text().toStdString();
-
+    bool found = false;
     for(int i=0; i<=numregistered;i++){
 
         if (( username == usernames[i])&&(password == passwords[i])){
@@ -31,8 +31,13 @@ void login::on_login2_clicked()
             hide (); // hiding this page
             products* productswindow = new products (this); //creating a new window of type products
             productswindow -> show();
+            found = true;
+            break;
 
         }
+
+    }
+    if(!found){
         ui-> loginerror -> setVisible(false);
         ui -> usernamel -> setText ("");
         ui -> passwordl -> setText ("");

@@ -65,7 +65,7 @@
     <string>Next Page</string>
    </property>
   </widget>
-  <widget class="QLabel" name="productsCart">
+  <widget class="QLabel" name="added">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -78,7 +78,7 @@
     <string>Added to Cart</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -111,7 +111,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>8</x>
@@ -144,7 +144,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>8</x>
@@ -177,7 +177,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>7</x>
