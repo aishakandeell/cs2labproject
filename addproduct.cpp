@@ -4,7 +4,8 @@
 #include "ui_addproduct.h"
 #include "products.h"
 #include <fstream>
-
+#include <QLabel>
+#include "products.h"
 
 addproduct::addproduct(QWidget *parent)
     : QDialog(parent)
@@ -29,7 +30,9 @@ void addproduct::on_addProd_clicked()
         prices.push_back(ui->priceProd->text().toDouble());
         availability.push_back(ui->avaProd->text().toInt());
         category.push_back(ui->categoryProd->currentText().toStdString());
-
+        //QString l=ui->prodName->text();
+        //l=ui->prodName->text();
+       // QLabel *label = new QLabel (l,products);
         prodAdded++;
 
         QMessageBox complete;

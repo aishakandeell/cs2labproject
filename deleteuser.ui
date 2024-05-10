@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>227</width>
-    <height>88</height>
+    <width>288</width>
+    <height>190</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <x>10</x>
      <y>20</y>
      <width>204</width>
-     <height>53</height>
+     <height>58</height>
     </rect>
    </property>
    <layout class="QFormLayout" name="formLayout">
@@ -33,14 +33,20 @@
     <item row="1" column="0">
      <widget class="QLineEdit" name="userDelete"/>
     </item>
-    <item row="1" column="1">
-     <widget class="QPushButton" name="deleteButton">
-      <property name="text">
-       <string>Delete</string>
-      </property>
-     </widget>
-    </item>
    </layout>
+  </widget>
+  <widget class="QPushButton" name="deleteButton">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>120</y>
+     <width>195</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
   </widget>
  </widget>
  <resources/>

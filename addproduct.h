@@ -20,6 +20,7 @@ private slots:
 
     void on_createCat_clicked();
 
+
 private:
     Ui::addproduct *ui;
 };

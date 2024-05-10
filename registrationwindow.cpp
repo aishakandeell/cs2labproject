@@ -3,8 +3,8 @@
 #include "ui_registrationwindow.h"
 #include "products.h"
 #include <QFile>
-#include <fstream> // For file I/O
-#include <sstream> // For string manipulation
+#include <fstream>
+#include <sstream>
 #include "login.h"
 using namespace std;
 
@@ -52,7 +52,7 @@ void registrationwindow::readUserData() {
 
 void registrationwindow::writeUserData() {
 
-    ofstream file(filename, ios::trunc); // Truncate file if it exists
+    ofstream file(filename);
     if (file.is_open()) {
         for (int i = 0; i < numregistered; ++i) {
             file << usernames[i] << " " << passwords[i] << " " << emails[i] << endl;
@@ -64,9 +64,7 @@ void registrationwindow::writeUserData() {
 
 void registrationwindow::deleteUserFromData(int r){
     std::ifstream inFile(filename);
-    if (!inFile.is_open()) {
-        //label error in deleting
-    }
+
 
     vector<std::string> lines;
     string line;
@@ -80,7 +78,7 @@ void registrationwindow::deleteUserFromData(int r){
     }
     inFile.close();
 
-    ofstream outFile(filename, ios::trunc); // Open file for writing, truncating previous content
+    ofstream outFile(filename); // Open file for writing
 
     for (const auto& l : lines) {
         outFile << l << std::endl; // Write all lines except the one to delete
@@ -108,7 +106,7 @@ void registrationwindow::on_registerclicked_clicked()
         }
     }
 
-    // Show appropriate message if username or email already exists
+
     if (userExists) {
         ui->usernameexists->setVisible(true);
         ui->usernamer->setText("");
@@ -118,7 +116,7 @@ void registrationwindow::on_registerclicked_clicked()
         ui->passwordr->setText("");
     }
 
-    // Register the user if username and email are unique
+
     if (!userExists && !emailExists) {
         usernames.push_back(username);
         passwords.push_back(password);

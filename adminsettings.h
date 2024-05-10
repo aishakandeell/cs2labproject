@@ -28,6 +28,8 @@ private slots:
 
     void on_deleteProd_clicked();
 
+    void on_backtlogin_clicked();
+
 private:
     Ui::adminSettings *ui;
 };

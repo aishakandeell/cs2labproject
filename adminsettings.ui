@@ -38,13 +38,13 @@
    <property name="title">
     <string>User Settings</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>7</x>
       <y>20</y>
       <width>272</width>
-      <height>56</height>
+      <height>67</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout">
@@ -84,13 +84,13 @@
    <property name="title">
     <string>Product Settings</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>20</y>
       <width>299</width>
-      <height>56</height>
+      <height>67</height>
      </rect>
     </property>
     <layout class="QFormLayout" name="formLayout_2">
@@ -117,6 +117,19 @@
      </item>
     </layout>
    </widget>
+  </widget>
+  <widget class="QPushButton" name="backtlogin">
+   <property name="geometry">
+    <rect>
+     <x>202</x>
+     <y>18</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>back to login</string>
+   </property>
   </widget>
  </widget>
  <resources/>

@@ -7,6 +7,7 @@
 #include "registrationwindow.h"
 #include "ui_adminsettings.h"
 #include "ui_edituser.h"
+#include "login.h"
 
 adminSettings::adminSettings(QWidget *parent)
     : QDialog(parent)
@@ -59,5 +60,13 @@ void adminSettings::on_deleteProd_clicked()
 {
     deleteprod* dP = new deleteprod();
     dP->show();
+}
+
+
+void adminSettings::on_backtlogin_clicked()
+{
+    hide(); // hiding this page
+    login* loginpage = new login(this);
+    loginpage->show();
 }
 

@@ -20,6 +20,7 @@ class products : public QDialog
 public:
     explicit products(QWidget *parent = nullptr);
     ~products();
+
 private slots:
     void on_product1_clicked();
     void on_product2_clicked();
